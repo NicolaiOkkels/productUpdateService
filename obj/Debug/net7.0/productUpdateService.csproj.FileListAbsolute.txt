@@ -1,0 +1,6 @@
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/obj/Debug/net7.0/productUpdateService.csproj.AssemblyReference.cache
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/obj/Debug/net7.0/productUpdateService.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/obj/Debug/net7.0/productUpdateService.AssemblyInfoInputs.cache
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/obj/Debug/net7.0/productUpdateService.AssemblyInfo.cs
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/obj/Debug/net7.0/productUpdateService.csproj.CoreCompileInputs.cache
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/obj/Debug/net7.0/productUpdateService.MvcApplicationPartsAssemblyInfo.cache
