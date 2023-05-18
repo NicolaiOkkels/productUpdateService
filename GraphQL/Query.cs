@@ -1,19 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using product_update_service.DataAccess;
+
+namespace product_update_service
+{
 public class Query
 {
-    private readonly IProductService _productService;
 
-    public Query(IProductService productService)
+    public Query()
     {
-        _productService = productService;
     }
 
-    public async Task<Wine> GetWineByIdAsync(Guid id)
+    public async Task<List<Wine>> GetWinesAsync([Service] ProductContext context)
     {
-        return await _productService.GetWineAsync(id);
+        return await context.Wine.ToListAsync();
     }
-
-    public async Task<List<Wine>> GetAllWinesAsync()
-    {
-        return await _productService.GetWinesAsync();
-    }
+}
 }

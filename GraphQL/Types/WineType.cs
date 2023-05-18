@@ -1,3 +1,6 @@
+namespace product_update_service
+{
+
 public class WineType : ObjectType<Wine>
 {
     protected override void Configure(IObjectTypeDescriptor<Wine> descriptor)
@@ -15,4 +18,5 @@ public class WineType : ObjectType<Wine>
         descriptor.Field(w => w.CategoryId).Type<NonNullType<IntType>>();
         descriptor.Field(w => w.ModifiedDate).Type<NonNullType<DateTimeType>>();
     }
+}
 }
