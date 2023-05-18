@@ -1,12 +1,9 @@
-using HotChocolate;
-using HotChocolate.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using product_update_service;
-using product_update_service.DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddSingleton<IRabbitMQService, RabbitMQService>();
+//builder.Services.AddSingleton<IRabbitMQService, RabbitMQService>();
 
 // Configure the database connection for MySQL
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")?

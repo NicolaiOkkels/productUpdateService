@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace product_update_service.DataAccess
+namespace product_update_service
 {
     public class ProductContext : DbContext
     {
@@ -9,16 +9,5 @@ namespace product_update_service.DataAccess
         {
         }
         public DbSet<Wine> Wine { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Wine>()
-                    .ToTable("wine_products")
-                    .Property(w => w.Id)
-                    .HasColumnName("wine_id");
-            modelBuilder.Entity<Category>()
-                    .ToTable("wine_categories")
-                    .HasKey(c => c.Id);
-        }
     }
 }
