@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Nest;
 using product_update_service;
 
 namespace product_update_service
@@ -51,5 +52,32 @@ namespace product_update_service
                 throw;
             }
         }
+
+        [GraphQLDescription("Search wines by category")]
+        public async Task<List<Wine>> SearchWinesByCategoryAsync([Service] ProductContext context, [Service] IElasticClient elasticClient, int categoryId)
+        {
+            try
+            {
+                var searchResponse = await elasticClient.SearchAsync<Wine>(s => s
+                    .Index("wine-category-index")
+                    .Query(q => q
+                        .Match(m => m
+                            .Field(f => f.CategoryId)
+                            .Query(categoryId.ToString())
+                        )
+                    )
+                );
+
+                return searchResponse.Documents.ToList();
+            }
+            catch (Exception e)
+            {
+                // Log the exception
+                Console.WriteLine(e);
+                // You could also consider returning a default value instead of re-throwing the exception
+                throw;
+            }
+        }
+
     }
 }

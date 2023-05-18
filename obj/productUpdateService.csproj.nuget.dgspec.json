@@ -42,6 +42,14 @@
               "target": "Package",
               "version": "[2.5.0, )"
             },
+            "Elastic.Clients.Elasticsearch": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Elasticsearch.Net": {
+              "target": "Package",
+              "version": "[7.17.5, )"
+            },
             "HotChocolate.AspNetCore": {
               "target": "Package",
               "version": "[13.0.5, )"
@@ -61,6 +69,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.5, )"
+            },
+            "NEST": {
+              "target": "Package",
+              "version": "[7.17.5, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

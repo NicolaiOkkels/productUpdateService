@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Nest;
 using product_update_service;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,11 +14,21 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ProductContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
+
+// Configure GraphQL
 builder.Services
     .AddGraphQLServer()
     .AddQueryType<Query>()
     .AddType<WineType>();
 
+// Configure Elasticsearch
+var elasticSettings = new ConnectionSettings(new Uri("http://localhost:9200"))
+    .DefaultIndex("wine-category-index");
+
+var elasticClient = new ElasticClient(elasticSettings);
+builder.Services.AddSingleton<IElasticClient>(elasticClient);
+
+//Build the app
 var app = builder.Build();
 
 app.UseRouting();

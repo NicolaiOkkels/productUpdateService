@@ -60,3 +60,7 @@
 /Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/obj/Debug/net7.0/productUpdateService.pdb
 /Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/obj/Debug/net7.0/productUpdateService.genruntimeconfig.cache
 /Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/obj/Debug/net7.0/ref/productUpdateService.dll
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/bin/Debug/net7.0/Elastic.Clients.Elasticsearch.dll
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/bin/Debug/net7.0/Elastic.Transport.dll
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/bin/Debug/net7.0/Elasticsearch.Net.dll
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/bin/Debug/net7.0/Nest.dll
