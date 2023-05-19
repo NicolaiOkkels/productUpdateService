@@ -11,6 +11,16 @@ Env.Load();
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        policy =>
+        {
+            policy.WithOrigins("*").AllowAnyHeader().WithMethods("GET", "POST");
+        });
+});
+
 //Register Service
 builder.Services.AddScoped<IProductService, ProductService>();
 
@@ -39,6 +49,8 @@ builder.Services.AddSingleton<IElasticClient>(elasticClient);
 
 //Build the app
 var app = builder.Build();
+
+app.UseCors();
 
 app.MapGraphQL();
 
