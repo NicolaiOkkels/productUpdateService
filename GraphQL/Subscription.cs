@@ -1,6 +1,8 @@
 using HotChocolate.Execution;
 //using HotChocolate.Subscriptions.IEventStream;
-namespace product_update_service
+using product_update_service.Entities;
+
+namespace product_update_service.GraphQL
 {
 public class Subscription
 {

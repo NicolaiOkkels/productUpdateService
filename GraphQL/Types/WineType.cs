@@ -1,4 +1,6 @@
-namespace product_update_service
+using product_update_service.Entities;
+
+namespace product_update_service.GraphQL.Types
 {
 
 public class WineType : ObjectType<Wine>
