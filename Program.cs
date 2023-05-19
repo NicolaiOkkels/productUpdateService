@@ -11,6 +11,16 @@ Env.Load();
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        policy =>
+        {
+            policy.WithOrigins("*").AllowAnyHeader().WithMethods("GET", "POST");
+        });
+});
+
 //Register Service
 builder.Services.AddScoped<IProductService, ProductService>();
 
@@ -21,7 +31,7 @@ builder.Services.AddScoped<IProductService, ProductService>();
 //    .Replace("MYSQL_USER", Environment.GetEnvironmentVariable("MYSQL_USER"))
 //    .Replace("MYSQL_PASSWORD", Environment.GetEnvironmentVariable("MYSQL_PASSWORD"))
 //    .Replace("PORT", Environment.GetEnvironmentVariable("PORT"));
-var connectionString = "server=127.0.0.1;port=3307;database=WineProductDB;user=root;password=123456";
+var connectionString = "server=127.0.0.1;port=3307;database=WineProductDB;user=NyBruger2;password=MinNyePw";
 
 builder.Services.AddDbContext<ProductDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
@@ -40,6 +50,8 @@ builder.Services.AddSingleton<IElasticClient>(elasticClient);
 
 //Build the app
 var app = builder.Build();
+
+app.UseCors();
 
 app.MapGraphQL();
 
