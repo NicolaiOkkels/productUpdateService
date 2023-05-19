@@ -26,6 +26,8 @@ builder.Services.AddScoped<IProductService, ProductService>();
 
 //builder.Services.AddSingleton<IRabbitMQService, RabbitMQService>();'
 
+Environment.GetEnvironmentVariables();
+
 // Configure the database connection for MySQL
 //var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")?
 //    .Replace("MYSQL_USER", Environment.GetEnvironmentVariable("MYSQL_USER"))
