@@ -16,14 +16,11 @@ builder.Services.AddScoped<IProductService, ProductService>();
 
 //builder.Services.AddSingleton<IRabbitMQService, RabbitMQService>();'
 
-Environment.GetEnvironmentVariables();
-
 // Configure the database connection for MySQL
-//var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")?
-//    .Replace("MYSQL_USER", Environment.GetEnvironmentVariable("MYSQL_USER"))
-//    .Replace("MYSQL_PASSWORD", Environment.GetEnvironmentVariable("MYSQL_PASSWORD"))
-//    .Replace("PORT", Environment.GetEnvironmentVariable("PORT"));
-var connectionString = "server=127.0.0.1;port=3307;database=WineProductDB;user=root;password=123456";
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")?
+   .Replace("MYSQL_USER", Environment.GetEnvironmentVariable("MYSQL_USER"))
+   .Replace("MYSQL_PASSWORD", Environment.GetEnvironmentVariable("MYSQL_PASSWORD"))
+   .Replace("PORT", Environment.GetEnvironmentVariable("PORT"));
 
 builder.Services.AddDbContext<ProductDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
