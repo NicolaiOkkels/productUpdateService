@@ -44,7 +44,7 @@ jobs:
         with:
           # build image in pull requests
           # publish only if branch is `main`
-          push: main
+          push: ${{ github.ref == 'refs/heads/main'}}
           # define at which tag should be docker image published
           tags: nho96/productupdateservice:latest
           # path to Dockerfile
