@@ -1,10 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Nest;
 using product_update_service.DataAccess;
-using product_update_service.Entities;
-using product_update_service.GraphQL;
 using product_update_service.GraphQL.Types;
 using product_update_service.Repositories;
+using product_update_service.RabbitMQ;
 using DotNetEnv;
 
 Env.Load();
@@ -24,7 +23,7 @@ builder.Services.AddCors(options =>
 //Register Service
 builder.Services.AddScoped<IProductService, ProductService>();
 
-//builder.Services.AddSingleton<IRabbitMQService, RabbitMQService>();'
+builder.Services.AddSingleton<IRabbitMQConsumer, RabbitMQConsumer>();
 
 // Configure the database connection for MySQL
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")?
