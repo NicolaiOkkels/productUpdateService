@@ -7,5 +7,6 @@ namespace product_update_service.Repositories
         public Task<List<Wine>> WineListAsync();
 
         public Task<Wine?> GetWineByIdAsync(Guid productId);
+        public Task<Wine> CreateWineAsync(Wine wine);
     }
 }

@@ -2,12 +2,10 @@ using product_update_service.Entities;
 
 namespace product_update_service.GraphQL.Types
 {
-
-public class WineType : ObjectType<Wine>
+public class WineInputType : InputObjectType<Wine>
 {
-    protected override void Configure(IObjectTypeDescriptor<Wine> descriptor)
+    protected override void Configure(IInputObjectTypeDescriptor<Wine> descriptor)
     {
-        descriptor.Field(w => w.Id).Type<NonNullType<IdType>>();
         descriptor.Field(w => w.ProductGuid).Type<NonNullType<UuidType>>();
         descriptor.Field(w => w.Name).Type<NonNullType<StringType>>();
         descriptor.Field(w => w.Description).Type<StringType>();

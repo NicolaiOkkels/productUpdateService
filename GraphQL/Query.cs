@@ -38,7 +38,7 @@ namespace product_update_service.GraphQL
             }
         }
 
-        [GraphQLDescription("Search wines by category")]
+        /* [GraphQLDescription("Search wines by category")]
         public async Task<List<Wine>> SearchWinesByCategoryAsync([Service] IElasticClient elasticClient, int categoryId)
         {
             try
@@ -61,7 +61,6 @@ namespace product_update_service.GraphQL
                 Console.WriteLine(e);
                 throw;
             }
-        }
-
+        } */
     }
 }

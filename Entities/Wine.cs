@@ -18,10 +18,8 @@ namespace product_update_service.Entities
         public string Origin { get; set; } = null!;
         public float AlcoholPercentage { get; set; }
         public int Year { get; set; }
-        public Byte[] Image { get; set; } = null!;
+        public string Image { get; set; } = null!;
         public string Size { get; set; } = null!;
-        public int CategoryId { get; set; }
-        public Category Category { get; set; }  = null!;
         public DateTime ModifiedDate { get; set; }
     }
 }

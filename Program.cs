@@ -24,6 +24,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<IProductService, ProductService>();
 
 builder.Services.AddSingleton<IRabbitMQConsumer, RabbitMQConsumer>();
+builder.Services.AddHostedService<RabbitMQListenerService>();
 
 // Configure the database connection for MySQL
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")?

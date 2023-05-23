@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `WineProductDB`.`wine_products` (
     ON UPDATE NO ACTION);
 
 -- Inserting data into WineProductDB.wine_categories
-INSERT INTO WineProductDB.wine_categories (category_id, category_name) VALUES
+INSERT INTO WineProductDB.Category (Id, CategoryName) VALUES
 (1, 'Red wine'),
 (2, 'White wine'),
 (3, 'Rosé Wine'),

@@ -19,6 +19,11 @@ dotnet add package RabbitMQ.Client --version 6.5.0
 
 ## Make sure Elasticsearch and rabbitMQ is running in Docker.
 
+## RabbitMQ
+```
+docker run -d --hostname rabbitmq --name rabbitmq-container -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+```
+
 ## Add .env file for MySQL username, password and port
 ```
 MYSQL_USER=<username>

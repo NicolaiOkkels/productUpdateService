@@ -29,5 +29,12 @@ namespace product_update_service.Repositories
 
             return wine;
         }
+
+        public async Task<Wine> CreateWineAsync(Wine wine)
+    {
+        dbContext.Wines.Add(wine);
+        await dbContext.SaveChangesAsync();
+        return wine;
+    }
     }
 }
