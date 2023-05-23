@@ -23,8 +23,8 @@ builder.Services.AddCors(options =>
 //Register Service
 builder.Services.AddScoped<IProductService, ProductService>();
 
-builder.Services.AddSingleton<IRabbitMQConsumer, RabbitMQConsumer>();
 builder.Services.AddHostedService<RabbitMQListenerService>();
+builder.Services.AddScoped<IRabbitMQConsumer, RabbitMQConsumer>();
 
 // Configure the database connection for MySQL
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")?
@@ -34,6 +34,11 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<ProductDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
+//rabbitmq
+var rabbitMQConfig = new RabbitMQConfiguration();
+builder.Configuration.GetSection("RabbitMQ").Bind(rabbitMQConfig);
+builder.Services.AddSingleton(rabbitMQConfig);
 
 // Configure GraphQL
 builder.Services
