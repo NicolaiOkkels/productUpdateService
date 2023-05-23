@@ -28,7 +28,7 @@ namespace product_update_service.RabbitMQ
 
             using var channel = conn.CreateModel();
 
-            channel.QueueDeclare("wines", durable: true, exclusive: false);
+            channel.QueueDeclare("wineQueue", durable: true, exclusive: false);
 
             var consumer = new EventingBasicConsumer(channel);
 
@@ -37,11 +37,11 @@ namespace product_update_service.RabbitMQ
                 // getting my byte[]
                 var body = eventArgs.Body.ToArray();
                 var message = Encoding.UTF8.GetString(body);
-                Console.WriteLine($"New ticket processing is initiated - {message}");
+                Console.WriteLine($"New wine created - {message}");
 
             };
 
-            channel.BasicConsume("wines", true, consumer);
+            channel.BasicConsume("wineQueue", true, consumer);
         }
     }
 }
