@@ -16,6 +16,11 @@ dotnet add package Newtonsoft.Json --version 13.0.3
 dotnet add package Pomelo.EntityFrameworkCore.MySql --version 7.0.0
 dotnet add package RabbitMQ.Client --version 6.5.0
 ```
+## Add migration
+```
+dotnet ef migrations add initialmigration 
+dotnet ef database update 
+```
 
 ## Make sure Elasticsearch and rabbitMQ is running in Docker.
 

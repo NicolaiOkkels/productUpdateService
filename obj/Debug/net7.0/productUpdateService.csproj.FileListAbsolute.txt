@@ -265,3 +265,8 @@ C:/Users/majab/OneDrive/kea/SoftwareDev/DLS/productUpdateService/obj/Debug/net7.
 /Users/erhanbasaran/productUpdateService/obj/Debug/net7.0/productUpdateService.pdb
 /Users/erhanbasaran/productUpdateService/obj/Debug/net7.0/productUpdateService.genruntimeconfig.cache
 /Users/erhanbasaran/productUpdateService/obj/Debug/net7.0/ref/productUpdateService.dll
+/Users/erhanbasaran/productUpdateService/bin/Debug/net7.0/Humanizer.dll
+/Users/erhanbasaran/productUpdateService/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/erhanbasaran/productUpdateService/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/erhanbasaran/productUpdateService/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/erhanbasaran/productUpdateService/bin/Debug/net7.0/System.CodeDom.dll

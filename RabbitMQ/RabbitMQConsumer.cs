@@ -28,7 +28,7 @@ namespace product_update_service.RabbitMQ
 
             using var channel = conn.CreateModel();
 
-            channel.QueueDeclare("wineQueue", durable: true, exclusive: false);
+            channel.QueueDeclare("wineQueue", durable: false, exclusive: false, autoDelete: true);
 
             var consumer = new EventingBasicConsumer(channel);
 

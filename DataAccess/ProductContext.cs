@@ -10,7 +10,7 @@ namespace product_update_service.DataAccess
         {
         }
         public DbSet<Wine> Wines { get; set; } = null!;
-        public DbSet<Category> Categories { get; set; } = null!;
+        //public DbSet<Category> Categories { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

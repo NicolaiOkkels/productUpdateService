@@ -21,7 +21,10 @@ public class RabbitMQListenerService : BackgroundService
         var factory = new ConnectionFactory() { HostName = "localhost" }; // or your RabbitMQ host
         connection = factory.CreateConnection();
         channel = connection.CreateModel();
-        channel.QueueDeclare(queue: "wineQueue");
+        channel.QueueDeclare(queue: "wineQueue",
+                             durable: false,
+                             exclusive: false,
+                             autoDelete: true);
     }
 
     protected override Task ExecuteAsync(CancellationToken stoppingToken)
@@ -35,7 +38,7 @@ public class RabbitMQListenerService : BackgroundService
 
             // Scope the service provider to the ProductService
             using var scope = services.CreateScope();
-            var productService = scope.ServiceProvider.GetRequiredService<ProductService>();
+            var productService = scope.ServiceProvider.GetRequiredService<IProductService>();
             productService.CreateWineAsync(wine).GetAwaiter().GetResult();
         };
 
