@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/erhanbasaran/productUpdateService/productUpdateService.csproj": {}
+    "/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/productUpdateService.csproj": {}
   },
   "projects": {
-    "/Users/erhanbasaran/productUpdateService/productUpdateService.csproj": {
+    "/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/productUpdateService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/erhanbasaran/productUpdateService/productUpdateService.csproj",
+        "projectUniqueName": "/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/productUpdateService.csproj",
         "projectName": "productUpdateService",
-        "projectPath": "/Users/erhanbasaran/productUpdateService/productUpdateService.csproj",
-        "packagesPath": "/Users/erhanbasaran/.nuget/packages/",
-        "outputPath": "/Users/erhanbasaran/productUpdateService/obj/",
+        "projectPath": "/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/productUpdateService.csproj",
+        "packagesPath": "/Users/nicolaiokkels/.nuget/packages/",
+        "outputPath": "/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/erhanbasaran/.nuget/NuGet/NuGet.Config"
+          "/Users/nicolaiokkels/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -116,7 +116,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

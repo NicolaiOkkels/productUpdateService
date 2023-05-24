@@ -270,3 +270,8 @@ C:/Users/majab/OneDrive/kea/SoftwareDev/DLS/productUpdateService/obj/Debug/net7.
 /Users/erhanbasaran/productUpdateService/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
 /Users/erhanbasaran/productUpdateService/bin/Debug/net7.0/Mono.TextTemplating.dll
 /Users/erhanbasaran/productUpdateService/bin/Debug/net7.0/System.CodeDom.dll
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/bin/Debug/net7.0/Humanizer.dll
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/nicolaiokkels/Desktop/productUpdateService/productUpdateService/bin/Debug/net7.0/System.CodeDom.dll

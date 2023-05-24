@@ -38,8 +38,8 @@ namespace product_update_service.GraphQL
             }
         }
 
-        /* [GraphQLDescription("Search wines by category")]
-        public async Task<List<Wine>> SearchWinesByCategoryAsync([Service] IElasticClient elasticClient, int categoryId)
+        [GraphQLDescription("Search wines by id")]
+        public async Task<List<Wine>> SearchWinesByIdAsync([Service] IElasticClient elasticClient, int id)
         {
             try
             {
@@ -47,11 +47,11 @@ namespace product_update_service.GraphQL
                     .Index("wine-category-index")
                     .Query(q => q
                         .Match(m => m
-                            .Field(f => f.CategoryId)
-                            .Query(categoryId.ToString())
+                            .Field(f => f.Id)
+                            .Query(id.ToString()
                         )
                     )
-                );
+                ));
 
                 return searchResponse.Documents.ToList();
             }
@@ -61,6 +61,6 @@ namespace product_update_service.GraphQL
                 Console.WriteLine(e);
                 throw;
             }
-        } */
+        }
     }
 }

@@ -18,8 +18,14 @@ dotnet add package RabbitMQ.Client --version 6.5.0
 ```
 ## Add migration
 ```
+dotnet tool install --global dotnet-ef
 dotnet ef migrations add initialmigration 
 dotnet ef database update 
+```
+
+If dotnet-ef command dont install use:
+```
+dotnet tool install --global dotnet-ef --ignore-failed-sources
 ```
 
 ## Make sure Elasticsearch and rabbitMQ is running in Docker.
