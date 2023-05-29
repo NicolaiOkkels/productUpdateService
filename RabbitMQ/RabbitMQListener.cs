@@ -18,7 +18,7 @@ public class RabbitMQListenerService : BackgroundService
     public RabbitMQListenerService(IServiceProvider services)
     {
         this.services = services;
-        var factory = new ConnectionFactory() { HostName = "20.81.56.98" }; // or your RabbitMQ host
+        var factory = new ConnectionFactory() { HostName = "localhost" }; // or your RabbitMQ host
         connection = factory.CreateConnection();
         channel = connection.CreateModel();
         channel.QueueDeclare(queue: "wineQueue",
@@ -26,7 +26,7 @@ public class RabbitMQListenerService : BackgroundService
                              exclusive: false,
                              autoDelete: true);
     }
-
+//test
     protected override Task ExecuteAsync(CancellationToken stoppingToken)
     {
         var consumer = new EventingBasicConsumer(channel);
